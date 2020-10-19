@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 
 import {todo_input} from '../styles';
 
 const TodoInput = (props) => {
 
-    const [text, setText] = useState("");
+const [text, setText] = useState("")
 
   return (
     <View style={todo_input.container}>
       <View style={todo_input.inputContainer}>
         <TextInput 
-            placeholder= "Type something to do..." 
-            onChangeText = {value => setText(value)}
+            placeholder="Type something to do..."
+            onChangeText ={value => setText(value)}
         />
       </View>
       <TouchableOpacity 
@@ -25,4 +25,4 @@ const TodoInput = (props) => {
   );
 };
 
-export default TodoInput;
+export {TodoInput};
