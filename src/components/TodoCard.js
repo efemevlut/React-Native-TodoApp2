@@ -1,12 +1,18 @@
-import React from "react-native";
-import {View, Text, TouchableOpacity} from "react-native";
+import React from "react";
+import {View, Text, TouchableOpacity, StyleSheet} from "react-native";
 
-const TododCard = (props) => {
+import { todo_card } from "../styles"
+
+const TodoCard = (props) => {
     return (
-        <View>
-            <Text>TodoCard</Text>
-        </View>
+        <TouchableOpacity 
+            style={todo_card.container}
+            onPress={() => props.onDone()}
+            onLongPress={() => props.onRemove()}
+        >
+            <Text style={[todo_card.text, {textDecorationLine: props.data.isDone ? "line-through" : null}]}>{props.data.todo}</Text>
+        </TouchableOpacity>
     )
 }
 
-export {TododCard};
+export {TodoCard};
