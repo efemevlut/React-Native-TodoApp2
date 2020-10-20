@@ -8,15 +8,22 @@ const Main = () => {
   const [list, setList] = useState([]);
 
   function addTodo(text) {
-    const element = {
-      id: list.length,
-      todo: text,
-      isDone: false,
-    };
 
-    const newArray = [...list, element];
+    if (text.length < 2) {
+        Alert.alert('OOPS!', 'Todos must be over 2 chars long', [
+            {text: 'Understood'},
+        ]);    
+    } else {
+        const element = {
+          id: list.length,
+          todo: text,
+          isDone: false,
+        };
 
-    setList(newArray);
+        const newArray = [...list, element];
+
+        setList(newArray);
+    }
   }
 
   function doneTodo(todoId) {
@@ -40,7 +47,9 @@ const Main = () => {
             data={item} 
             onDone={() => doneTodo(item.id)} 
             onRemove={() => Alert.alert("Delete", "Are you sure?", [
-                {text: 'Sure', onPress: () => removeTodo(item.id)},])
+                {text: 'Sure', onPress: () => removeTodo(item.id)},
+                {text: 'Cancel'},
+                ])
             }
         />
     )
