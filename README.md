@@ -1,6 +1,6 @@
 
 
-<h1 align="center">{TodoApp}</h1>
+<h1 align="center">TodoApp</h1>
 
 
 
@@ -20,7 +20,6 @@
 ![screenshot](overview/First.gif)
 ![screenshot](overview/Second.gif)
 
-Introduce your projects by taking a screenshot or a gif. 
 
 ### Built With
 
@@ -57,6 +56,6 @@ $ npx react-native run-android
 
 ## Contact
 
-- GitHub [@your-efemevlut](https://{github.com/efemevlut})
+- GitHub [@your-efemevlut](https://github.com/efemevlut)
 - Linkedin [@your-linkedin](https://www.linkedin.com/in/mevl%C3%BCt-efe-5465221b8/)
 
